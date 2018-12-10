@@ -1,0 +1,44 @@
+<link rel="stylesheet" type="text/css" href="./custom_css/login.css" />
+
+<div class="container" ng-cloak>
+    <div class="row top-margin">
+       <!--<div class="col-md-4 logo-area">
+            <div class="media border p-3 shadow">
+                <img src="./images/logo.png" alt="aroha logo" class="mr-3 mt-3 rounded" style="width:60px;">
+                <div class="media-body">
+                    <h4>Aroha Technologies</h4>
+                    <p>Welcome to Employee daily status Report Application</p>
+                </div>
+            </div>
+        </div>--> 
+        <div class="col-md-4 center">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Login</h4>
+                </div>
+                <div class="card-body">
+                    <form name="login" ng-submit="loginSubmit();">
+                        <div class="form-group">
+                            <label for="email"><i class="fa fa-envelope-o"></i> Email address:</label>
+                            <input type="email" class="form-control text-box" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd"><i class="fa fa-key"></i> Password:</label>
+                            <input type="password" class="form-control text-box" id="pwd">
+                        </div>
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox"> Remember me
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary"><i class="fa fa-paper-plane-o"></i>
+                            Submit</button>
+                    </form>
+                    <p class="message text-md-left text-xs-center"><b>Not registered? <a href="/#!/register">Create an
+                                account</a></b> </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

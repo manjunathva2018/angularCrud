@@ -1,0 +1,43 @@
+.logo-area{
+border-right: 1px solid  #4CAF50;
+margin-bottom: 20px;
+}
+.text-box{
+    border:1px solid rgb(245, 132, 33);
+}
+.shadow{
+    background-color: white;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.top-margin{
+    margin-top: 80px;
+}
+
+.center{
+    margin: auto;
+}
+
+.card{
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.card-header{
+    background-color:#009688;
+    color:white
+  }
+
+.body-color{
+   background-color: honeydew;
+}
+
+.message {
+    margin: 15px 0 0;
+    font-size: 12px;
+  }
+.message a {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+
+.error{
+    color:red;
+}

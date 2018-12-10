@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Aroha Daily Status Report</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--CSS libraries-->
+  <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/angular-material.min.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap-datetimepicker.min.css" />
+
+  <!--JavaScipt libraries-->
+  <script type="text/javascript" src="./assets/js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./assets/js/popper.min.js"></script>
+  <script type="text/javascript" src="./assets/js/moment.js"></script>
+  <script type="text/javascript" src="./assets/js/angular1.7.min.js"></script>
+  <script type="text/javascript" src="./assets/js/angular-route.min.js"></script>
+  <script type="text/javascript" src="./assets/js/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="./assets/js/angular-animate.min.js"></script>
+  <script type="text/javascript" src="./assets/js/angular-aria.min.js"></script>
+  <script type="text/javascript" src="./assets/js/angular-messages.min.js"></script>
+  <script type="text/javascript" src="./assets/js/angular-material.min.js"></script>
+  <script type="text/javascript" src="./assets/js/bootstrap-datetimepicker.min.js"></script>
+
+</head>
+
+<body ng-app="userModule">
+  <div ng-controller="userCtrl" ng-cloak>
+   <!--
+      <md-toolbar md-theme="light-green">
+          <div>
+              <md-button ng-click="toggleLeft()" class="md-raised">
+                  Toggle
+                </md-button>
+            <md-button>Test</md-button>
+            <md-button>Test</md-button>
+            <md-button hide-sm>Test</md-button>
+          </div>
+        </md-toolbar>
+      <md-sidenav class="md-sidenav-left" md-component-id="left" md-whiteframe="4">
+
+<md-toolbar class="md-theme-indigo">
+<h1 class="md-toolbar-tools">Dashboard</h1>
+</md-toolbar>
+
+<md-content layout-margin>
+<ul>
+  <li>Dashboard</li>
+  <li>Profile</li>
+  <li>Daily Report Status </li>
+  <li>Previous Status Report</li>
+</ul>
+
+<md-button ng-click="toggleLeft()" class="md-accent">
+Close this Sidenav
+</md-button>
+</md-content>
+
+</md-sidenav>
+
+
+   --> 
+ 
+<nav class="navbar navbar-expand-sm bg-info navbar-dark justify-content-end">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="/#!">
+      <img src="./images/logo.PNG" alt="logo" style="width:150px;height: 40px;">
+    </a>
+    
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 3</a>
+      </li>
+       <!-- Dropdown -->
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Username
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Link 1</a>
+          <a class="dropdown-item" href="#">Link 2</a>
+          <a class="dropdown-item" href="#">Link 3</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  
+
+    <div ui-view></div>
+    <!--<div ng-view></div>-->
+  </div>
+
+<footer class="fixed-bottom">
+  <div><h5>&copy Copywrite Protected</h5></div>
+</footer>
+  <!--custom JavaScript files-->
+  <script type="text/javascript" src="./user.js"></script>
+  <script type="text/javascript" src="./controllers/userDashboardCtrl.js"></script>
+</body>
+
+</html>

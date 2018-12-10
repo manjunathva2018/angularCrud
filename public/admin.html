@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Aroha Daily Status Report</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--CSS libraries-->
+  <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/angular-material.min.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap-datetimepicker.min.css" />
+
+  <!--JavaScipt libraries-->
+  <script type="text/javascript" src="./assets/js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./assets/js/popper.min.js"></script>
+  <script type="text/javascript" src="./assets/js/moment.js"></script>
+  <script type="text/javascript" src="./assets/js/angular1.7.min.js"></script>
+  <script type="text/javascript" src="./assets/js/angular-route.js"></script>
+  <script type="text/javascript" src="./assets/js/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="./assets/js/angular-animate.min.js"></script>
+  <script type="text/javascript" src="./assets/js/angular-aria.min.js"></script>
+  <script type="text/javascript" src="./assets/js/angular-messages.min.js"></script>
+  <script type="text/javascript" src="./assets/js/angular-material.min.js"></script>
+  <script type="text/javascript" src="./assets/js/bootstrap-datetimepicker.min.js"></script>
+
+</head>
+
+<body ng-app="adminModule">
+  <div ng-controller="adminCtrl">
+    <div ui-view></div>
+    <!--<div ng-view></div>-->
+  </div>
+
+  <!--custom JavaScript files-->
+  <script type="text/javascript" src="./admin.js"></script>
+  <script type="text/javascript" src="./controllers/adminDashboardCtrl.js"></script>
+</body>
+
+</html>
