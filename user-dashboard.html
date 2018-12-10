@@ -1,0 +1,123 @@
+<link rel="stylesheet" href="./custom_css/user-dashboard.css" />
+
+<div class="container">
+        <div class="alert alert-info alert-dismissible" ng-show="alert">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>{{alertMessage}}</strong>
+        </div>
+        <h4 class="text-center">Crud operations-</h4>
+        <div class="row">
+                <div>Search Here <input type="search" ng-model="wordSearch" /></div>
+                <button class="btn btn-info button-margin-left btn-sm" data-toggle="modal" data-target="#myModal1"><i
+                                class="fa fa-plus"></i> Add User</button>
+        </div>
+        <br />
+        <div>
+                <table class="table table-bordered table-hover">
+                        <thead>
+                                <tr>
+                                        <th>Name</th>
+                                        <th>Postion</th>
+                                        <th>Office</th>
+                                        <th>Actions</th>
+                                </tr>
+                        </thead>
+                        <tbody>
+
+                                <tr ng-repeat="user in totalUsers | filter:wordSearch">
+                                        <td>{{user.Name}}</td>
+                                        <td>{{user.Position}}</td>
+                                        <td>{{user.Office}}</td>
+                                        <td><button class="button-margin-left btn btn-warning btn-sm" data-toggle="modal"
+                                                        data-target="#myModal2" ng-click="openUpdate(user.Name);">Update</button><button
+                                                        class="button-margin-left btn btn-danger btn-sm" ng-click="deleteUser(user.Name);">Delete</button></td>
+                                </tr>
+                        </tbody>
+
+                </table>
+                <div ng-show="noRecords">
+                        <h3>No Record Found</h3>
+                </div>
+
+        </div>
+</div>
+
+<div class="modal fade" id="myModal1">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+                <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                                <h4 class="modal-title">Add User</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                                <div class="col-md-12">
+                                        <form name="addUserForm" ng-submit="addUser();">
+                                                <div class="form-group">
+                                                        <label for="user">User Name:</label>
+                                                        <input type="text" ng-model="name" class="form-control" id="user">
+                                                </div>
+                                                <div class="form-group">
+                                                        <label for="pwd">Position:</label>
+                                                        <input type="text" ng-model="position" class="form-control" id="pwd">
+                                                </div>
+                                                <div class="form-group">
+                                                        <label for="office">Office:</label>
+                                                        <input type="text" ng-model="office" class="form-control" id="office">
+                                                </div>
+
+                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                        </form>
+                                </div>
+
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+
+                </div>
+        </div>
+</div>
+
+<div class="modal fade" id="myModal2">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+                <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                                <h4 class="modal-title">Update User</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                                <form name="updateUserForm" ng-submit="updateUser();">
+                                        <div class="form-group">
+                                                <label for="user"><b>User Name: {{updateName}}</b></label>
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="pos">Position:</label>
+                                                <input type="text" ng-model="updatePosition" class="form-control" id="pos">
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="offe">Office:</label>
+                                                <input type="text" ng-model="updateOffice" class="form-control" id="offe">
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+
+                </div>
+        </div>
+</div>
