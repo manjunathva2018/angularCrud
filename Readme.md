@@ -1,7 +1,11 @@
 ### Author : **Manjunath V A**
-### Description: *This is a sample application based on attendance management.*
+### Description: *This is a sample application based on CRUD.*
 
-####Note: Create a New DataBase named  **'Attendance'**  in your local Database  of MongoDB before Running the server.
+###Note: before running type npm install from terminal .
+
+### type node server.js from the terminal.
+
+
 
 Front end | Back end | DataBase
 ------------|-----------|-----------
