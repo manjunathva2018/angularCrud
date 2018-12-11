@@ -18,6 +18,9 @@ app.controller('userDashboardCtrl', ['$scope', '$injector', function (s, i) {
                 if (s.totalUsers.length === 0) {
                     s.noRecords = true;
                 }
+                else{
+                    s.noRecords = false;
+                }
                 console.log("getalluser response", s.totalUsers);
             }, function (error) {
                 s.totalUsersError = error.data;
@@ -27,6 +30,7 @@ app.controller('userDashboardCtrl', ['$scope', '$injector', function (s, i) {
     }
     s.getAllUsers();
 
+   
     s.addUser = function () {
         var obj = {};
         obj.name = s.name;
@@ -44,6 +48,7 @@ app.controller('userDashboardCtrl', ['$scope', '$injector', function (s, i) {
                 }
                 s.name = ""; s.position = ""; s.office = "";
                 s.getAllUsers();
+                $('.modal').modal('hide'); 
             }, function (error) {
                 console.log("addUser response", error.data);
             });
@@ -64,10 +69,11 @@ app.controller('userDashboardCtrl', ['$scope', '$injector', function (s, i) {
             .then(function (response) {
                 s.updateResponse = response.data;
                 console.log("updateResponse response", s.addUserResponse);
-                s.getAllUsers();
                 s.alertMessage = "user updated successfully"
                 s.alert = true;
                 s.closeAlert();
+                s.getAllUsers();
+                $('.modal').modal('hide'); 
             }, function (error) {
                 console.log("updateUser response", error.data);
             })
@@ -79,10 +85,10 @@ app.controller('userDashboardCtrl', ['$scope', '$injector', function (s, i) {
             .then(function (response) {
                 s.deleteRes = response.data;
                 console.log("deleteUser response:", s.deleteRes)
-                s.getAllUsers();
                 s.alertMessage = "A user is deleted successfully"
                 s.alert = true;
                 s.closeAlert();
+                s.getAllUsers();
             }, function (error) {
                 console.log("deleteUser error:", error.data)
             })

@@ -3,11 +3,11 @@
 <div class="container">
         <div class="alert alert-info alert-dismissible" ng-show="alert">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
-                <strong>{{alertMessage}}</strong>
+                <strong>{{alertMessage}}</strong> 
         </div>
         <h4 class="text-center">Crud operations-</h4>
         <div class="row">
-                <div>Search Here <input type="search" ng-model="wordSearch" /></div>
+                <div>Search Here <input type="search" ng-model="wordSearch"/></div>
                 <button class="btn btn-info button-margin-left btn-sm" data-toggle="modal" data-target="#myModal1"><i
                                 class="fa fa-plus"></i> Add User</button>
         </div>
@@ -23,21 +23,18 @@
                                 </tr>
                         </thead>
                         <tbody>
-
+                                       
                                 <tr ng-repeat="user in totalUsers | filter:wordSearch">
                                         <td>{{user.Name}}</td>
                                         <td>{{user.Position}}</td>
                                         <td>{{user.Office}}</td>
                                         <td><button class="button-margin-left btn btn-warning btn-sm" data-toggle="modal"
-                                                        data-target="#myModal2" ng-click="openUpdate(user.Name);">Update</button><button
-                                                        class="button-margin-left btn btn-danger btn-sm" ng-click="deleteUser(user.Name);">Delete</button></td>
+                                                        data-target="#myModal2" ng-click="openUpdate(user.Name);">Update</button><button class="button-margin-left btn btn-danger btn-sm" ng-click="deleteUser(user.Name);">Delete</button></td>
                                 </tr>
                         </tbody>
 
                 </table>
-                <div ng-show="noRecords">
-                        <h3>No Record Found</h3>
-                </div>
+                <div ng-show="noRecords"><h3>No Record Found</h3></div>
 
         </div>
 </div>

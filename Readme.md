@@ -1,4 +1,4 @@
-### Author : **Manjunath V A**
+### Author : **Nisha and Manjunath V A**
 ### Description: *This is a sample application based on CRUD.*
 
 ###Note: before running type npm install from terminal .
